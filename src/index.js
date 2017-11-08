@@ -1,3 +1,5 @@
+/* eslint key-spacing: "off" */
+
 const prefixLookupTable = require('./prefixLookupTable');
 const checksumLookupTable = require('./checksumLookupTable');
 
@@ -16,7 +18,7 @@ const salesforceIdRegexp = new RegExp(/^[0-9A-Za-z]+$/);
 const splitSfId15 = (str) => [
   str.substring(0, 5),
   str.substring(5, 10),
-  str.substring(10, 15)
+  str.substring(10, 15),
 ];
 
 
@@ -26,7 +28,7 @@ const replaceUpperWith1 = (array) => array.map(char =>
 
 const calcChecksum = (sfId15) => {
   return splitSfId15(sfId15)
-    .map(part => part.split('').reverse())  // split & reverse
+    .map(part => part.split('').reverse()) // split & reverse
     .map(replaceUpperWith1)
     .map(part => checksumLookupTable[part.join('')])
     .join('');
@@ -47,12 +49,12 @@ const basicValidationError = (id, stringLength) => {
     return errorCodes.INVALID_CHARACTERS;
   }
 
-  if (!prefixLookupTable.hasOwnProperty(id.substring(0,3))) {
+  if (!prefixLookupTable.hasOwnProperty(id.substring(0, 3))) {
     return errorCodes.INVALID_PREFIX;
   }
 
   return false;
-}
+};
 
 
 // Returns the result of a validation and error codes
@@ -80,8 +82,8 @@ const validateId18 = (sfId18) => {
   }
 
   result.meta = {
-    entityType: prefixLookupTable[sfId18.substring(0,3)],
-    serverId: sfId18.substring(3,5),
+    entityType: prefixLookupTable[sfId18.substring(0, 3)],
+    serverId: sfId18.substring(3, 5),
     identifier: sfId18.substring(5, 15),
     extractedChecksum,
     calculatedChecksum,
@@ -91,7 +93,7 @@ const validateId18 = (sfId18) => {
 };
 
 
-// Returns id18 calculated for a given id15, or 
+// Returns id18 calculated for a given id15
 const generateId18FromId15 = (sfId15) => {
   const result = {
     valid: false,

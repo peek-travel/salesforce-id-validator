@@ -4,7 +4,9 @@
   "description": "A Library to validate and convert to Salesforce 18IDs",
   "main": "src/index.js",
   "scripts": {
-    "test": "node ./test/validatorTests.js"
+    "test": "node ./test/validatorTests.js",
+    "prepublish": "npm run lint && npm test",
+    "lint": "node_modules/.bin/eslint src/"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/peek-travel/salesforce-id-validator/issues"
   },
-  "homepage": "https://github.com/peek-travel/salesforce-id-validator#readme"
+  "homepage": "https://github.com/peek-travel/salesforce-id-validator#readme",
+  "devDependencies": {
+    "eslint": "^4.10.0",
+    "eslint-config-google": "^0.9.1"
+  }
 }
