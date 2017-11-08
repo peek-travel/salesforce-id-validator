@@ -30,9 +30,6 @@ salesforceIdValidator.validateId18('001A00000006Vm9uIAC');
     }
   }
 
-result.valid
-    true
-
 ```
 
 
@@ -53,8 +50,8 @@ salesforceIdValidator.generateId18FromId15('001A00000006Vm9u');
 
 ### CAVEAT
 
-DON'T USE THE RESULT IN A IF CLAUSE,
-BECAUSE IT WILL ALWAYS EVALUATE TO TRUE SINCE ITS AN OBJECT!!!
+DON'T USE THE RESULT IN AN IF CLAUSE,
+BECAUSE IT WILL ALWAYS EVALUATE TO TRUE SINCE IT'S AN OBJECT!!!
 
 ### Errors
 

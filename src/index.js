@@ -47,6 +47,10 @@ const basicValidationError = (id, stringLength) => {
     return errorCodes.INVALID_CHARACTERS;
   }
 
+  if (!prefixLookupTable.hasOwnProperty(id.substring(0,3))) {
+    return errorCodes.INVALID_PREFIX;
+  }
+
   return false;
 }
 
@@ -67,12 +71,6 @@ const validateId18 = (sfId18) => {
 
   sfId18 = sfId18.trim();
 
-  const entityType = prefixLookupTable[sfId18.substring(0,3)];
-  if (!entityType) {
-    result.error = errorCodes.INVALID_PREFIX;
-    return result;
-  }
-
   const extractedChecksum = sfId18.substring(15, 18);
   const calculatedChecksum = calcChecksum(sfId18.substring(0, 15));
 
@@ -81,9 +79,8 @@ const validateId18 = (sfId18) => {
     return result;
   }
 
-
   result.meta = {
-    entityType,
+    entityType: prefixLookupTable[sfId18.substring(0,3)],
     serverId: sfId18.substring(3,5),
     identifier: sfId18.substring(5, 15),
     extractedChecksum,
