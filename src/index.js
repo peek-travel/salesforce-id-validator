@@ -1,15 +1,15 @@
-/* eslint key-spacing: "off" */
-
 const prefixLookupTable = require('./prefixLookupTable');
 const checksumLookupTable = require('./checksumLookupTable');
 
+/* eslint-disable key-spacing */
 const errorCodes = {
-  ID_IS_NOT_A_STRING :'ID_IS_NOT_A_STRING',
-  INVALID_LENGTH     :'INVALID_LENGTH',
-  INVALID_CHARACTERS :'INVALID_CHARACTERS',
-  INVALID_PREFIX     :'INVALID_PREFIX',
-  INVALID_CHECKSUM   :'INVALID_CHECKSUM',
+  ID_IS_NOT_A_STRING: 'ID_IS_NOT_A_STRING',
+  INVALID_LENGTH    : 'INVALID_LENGTH',
+  INVALID_CHARACTERS: 'INVALID_CHARACTERS',
+  INVALID_PREFIX    : 'INVALID_PREFIX',
+  INVALID_CHECKSUM  : 'INVALID_CHECKSUM',
 };
+/* eslint-enable key-spacing */
 
 const salesforceIdRegexp = new RegExp(/^[0-9A-Za-z]+$/);
 
