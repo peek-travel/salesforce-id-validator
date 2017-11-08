@@ -6,7 +6,7 @@ const errorCodes = {
   INVALID_LENGTH     :'INVALID_LENGTH',
   INVALID_CHARACTERS :'INVALID_CHARACTERS',
   INVALID_PREFIX     :'INVALID_PREFIX',
-  INVAILD_CHECKSUM   :'INVAILD_CHECKSUM',
+  INVALID_CHECKSUM   :'INVALID_CHECKSUM',
 };
 
 const salesforceIdRegexp = new RegExp(/^[0-9A-Za-z]+$/);
@@ -77,7 +77,7 @@ const validateId18 = (sfId18) => {
   const calculatedChecksum = calcChecksum(sfId18.substring(0, 15));
 
   if (extractedChecksum !== calculatedChecksum) {
-    result.error = errorCodes.INVAILD_CHECKSUM;
+    result.error = errorCodes.INVALID_CHECKSUM;
     return result;
   }
 

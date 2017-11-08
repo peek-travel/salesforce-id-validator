@@ -62,5 +62,5 @@ BECAUSE IT WILL ALWAYS EVALUATE TO TRUE SINCE ITS AN OBJECT!!!
 - `INVALID_LENGTH`: id not 18 characters long, 15 if you are using `generateId18FromId15` function
 - `INVALID_CHARACTERS`: id contains invalid characters; (only `[0-9a-zA-Z]`)
 - `INVALID_PREFIX`: prefix unkown to salesforce ![Help Doc](https://help.salesforce.com/articleView?id=Standard-Field-Record-ID-Prefix-Decoder&language=en_US&type=1)
-- `INVAILD_CHECKSUM`: checksum calculation doesn't match with the provided one ![Useful Blog Post](https://astadiaemea.wordpress.com/2010/06/21/15-or-18-character-ids-in-salesforce-com-%E2%80%93-do-you-know-how-useful-unique-ids-are-to-your-development-effort/)
+- `INVALID_CHECKSUM`: checksum calculation doesn't match with the provided one ![Useful Blog Post](https://astadiaemea.wordpress.com/2010/06/21/15-or-18-character-ids-in-salesforce-com-%E2%80%93-do-you-know-how-useful-unique-ids-are-to-your-development-effort/)
 

@@ -15,9 +15,13 @@
     "validator"
   ],
   "author": "Jens Klein @ Peek-Travel",
+  "email": "jens.klein@peek.com",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/peek-travel/salesforce-id-validator/issues"
   },
-  "homepage": "https://github.com/peek-travel/salesforce-id-validator#readme"
+  "homepage": "https://github.com/peek-travel/salesforce-id-validator#readme",
+  "scripts": {
+    "test": "node ./test/validatorTests.js"
+  }
 }
