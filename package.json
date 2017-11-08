@@ -4,7 +4,7 @@
   "description": "A Library to validate and convert to Salesforce 18IDs",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node ./test/validatorTests.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,5 @@
   "bugs": {
     "url": "https://github.com/peek-travel/salesforce-id-validator/issues"
   },
-  "homepage": "https://github.com/peek-travel/salesforce-id-validator#readme",
-  "scripts": {
-    "test": "node ./test/validatorTests.js"
-  }
+  "homepage": "https://github.com/peek-travel/salesforce-id-validator#readme"
 }
