@@ -47,6 +47,20 @@ salesforceIdValidator.generateId18FromId15('001A00000006Vm9u');
   }
 ```
 
+## Using Validator in browser
+
+Grab a copy of either `salesforce-id-validator.js` or the minified version
+`salesforce-id-validator.min.js` and add it to your HTML file like this:
+
+```
+<script src=".../salesforce-id-validator.min.js"></script>
+```
+
+It will automatically hook into the `window` object and can be accessed like this
+
+``` 
+window.salesforceIdValidator.validateId18( ... )
+```
 
 ### CAVEAT
 
