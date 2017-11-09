@@ -1,6 +1,6 @@
 {
   "name": "salesforce-id-validator",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "description": "A Library to validate and convert to Salesforce 18IDs",
   "main": "src/index.js",
   "scripts": {
